@@ -22,7 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin("*")
 public class SumaController {
     @PostMapping("/suma")
-    public long Suma(@Validated @RequestBody Numeros numeros){
-        return numeros.getNum1()+ numeros.getNum2();
+    public Numeros Suma(@Validated @RequestBody Numeros numeros){
+        Numeros suma = new Numeros(numeros.getNum1(), numeros.getNum2());
+        return suma;
     }
 }

@@ -12,6 +12,12 @@ package com.api.calculadora.model;
 public class Numeros {
     private long num1;
     private long num2;
+    private long result;
+
+    public Numeros(long num1, long num2) {
+        this.num1 = num1;
+        this.num2 = num2;
+    }
 
     public long getNum1() {
         return num1;
@@ -29,6 +35,9 @@ public class Numeros {
         this.num2 = num2;
     }
     
+     public long getResult() {
+        return result = this.num1 + this.num2;
+    }
     
     
 }
